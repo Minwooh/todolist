@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My ToDoList</title>
+
+    <link rel="stylesheet" href="./todoStyle.css" />
+  </head>
+  <body>
+    <div id="page">
+      <div class="leftSide">
+        <!--오늘 해야할 일-->
+        <h5>GOALS</h5>
+        <div class="today-list">
+          <article>
+            <h4>TODAY</h4>
+            <input
+              type="range"
+              name="points"
+              min="0"
+              max="10"
+              class="rangeInput_t"
+            />
+          </article>
+          <article>
+            <h4>MONTH</h4>
+            <input
+              type="range"
+              name="points"
+              min="0"
+              max="10"
+              class="rangeInput_m"
+            />
+          </article>
+          <article>
+            <h4>YEAR</h4>
+            <input
+              type="range"
+              name="points"
+              min="0"
+              max="10"
+              class="rangeInput_y"
+            />
+          </article>
+        </div>
+        <!-- 메모하기 -->
+        <h5>MEMO</h5>
+        <form class="memo">
+          <p><textarea cols="55" rows="18" id="text-memo"></textarea></p>
+          <p><input type="reset" value="RESET" class="click-button" /></p>
+        </form>
+      </div>
+      <!--  -->
+      <div class="rightSide">
+        <!-- 추가 -->
+        <nav id="add-list">
+          <input type="date" id="fdata" value="" />
+          <input id="toDo" type="text" />
+          <button class="add-button" onclick="addTodo()"><b>+</b></button>
+        </nav>
+        <!-- 리스트들 -->
+        <div class="add-content">
+          <div>
+            <ul id="addTodo" class="Todolist">
+              <li><div id="result"></div></li>
+            </ul>
+          </div>
+          <div class="footer">
+            <button
+              type="button"
+              id="allClear"
+              onclick="allClearList()"
+              class="click-button"
+            >
+              모두 삭제
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>

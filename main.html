@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList_main</title>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1><b>Todo List</b></h1>
+
+      <div class="login">
+        <form id="btn_group">
+          ID :
+          <input
+            id="userid"
+            type="text"
+            placeholder="아이디를 입력하세요"
+          /><br />
+          PW :
+          <input
+            id="pwd"
+            type="password"
+            placeholder="비밀번호를 입력하세요"
+            maxlength="5"
+          /><br /><br />
+        </form>
+
+        <div id="log-button">
+          <!-- 로그인 버튼을 누르면 화면 이동-->
+          <input
+            type="button"
+            onClick="location.href='todo.html'"
+            value="로그인"
+            class="button"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
